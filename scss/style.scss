@@ -1,0 +1,71 @@
+/*maps*/
+$var:(
+	primary : beige,
+	secondary: pink, 
+	sesues: rgb(198, 66, 147),
+);
+$primary : map-get($var,primary );
+
+body{
+	background-color: $primary;
+}
+
+$headings:(
+	h1: 4em,
+	h2:3em,
+	h3:2em,
+	h4:1em,
+	h5:0.75em,
+	h6:0.35em,
+);
+
+$h1: map-get($headings,h3);
+
+
+h1{
+	font-size: $h1;
+}
+
+
+/*aqui termina maps*/
+
+/* aqui empezamos em mixin */
+@mixin primero {
+
+    width: 35%;
+ background-color:#EBBED8 ;
+ box-shadow: 6px 20px 10px black;
+}
+
+
+.adoptar {
+	@include primero;
+}
+.castrar {
+	@include primero;
+}
+
+/*extends*/
+.button{
+	border: none;
+	padding: 15px 30px;
+	text-align: center;
+	font-size: 22px;
+	cursor: pointer;
+	box-shadow: 2px 2px 10px #000;
+
+	}
+
+.verde {
+	@extend .button;
+	background-color: green;
+}
+.violeta{
+	@extend .button ;
+	background-color: violet;
+}
+.amarillo {
+	@extend .button;
+	background-color: yellow;
+}
+
