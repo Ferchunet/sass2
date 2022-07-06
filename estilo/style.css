@@ -28,13 +28,13 @@ h1 {
   box-shadow: 2px 2px 10px #000; }
 
 .verde {
-  background-color: green; }
+  background-color: rgb(128, 63, 181); }
 
 .violeta {
-  background-color: violet; }
+  background-color: rgb(128, 63, 181); }
 
 .amarillo {
-  background-color: yellow; }
+  background-color: rgb(128, 63, 181s); }
 
 
   * aqui empezamos em mixin */
@@ -161,8 +161,9 @@ input {
 
 
 .imagen{
-    width: 30%;
-    
+    width: 50%;
+    position: relative;
+    right: -5%;
 }
 .imagen img {
     width: 80%;
@@ -377,6 +378,10 @@ form:hover{
     margin: auto;
     padding: auto;
 }
+.conteiner1 img {
+   width: 100%;
+   height: 100%;
+}
 .conteiner1 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:rgb(75, 20, 75);
@@ -386,74 +391,89 @@ form:hover{
     box-shadow: 2px 5px 30px black;
  
 }
-/*aqui hacemos el querie 480px*/
+/*aqui hacemos el querie800pxx*/
 
 @media only screen and (max-width: 800px) {
 /*aqui editamos el index*/
+body {
+    justify-content: center;
+    align-items: center;
+}
+.conteiner-fluid{
+    width: 100%;
+}
+.datos-importantes {
+ display: block;
+}
+  
+
+  .adoptar {
+    width: 80%;
+    height: 30%;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    right: -50px;
+    padding: 5px 5px;
+  }
+  .adoptar h2 {
+    text-align: center;
+  }
+  .adoptar p{
+  margin: 15px 15px;
+  font-size: 20px;
+  }
+  .castrar {
+    width: 80%;
+    height: 30%;
+    box-shadow: 2px 5px 30px black;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    right: -50px;
+    padding: 5px 5px;
+     
+  }
+  .castrar h2 {
+    text-align: center;
+  }
+  .castrar p{
+  margin: 15px 15px;
+  font-size: 20px;
+  }
 .nav-item{
     position: relative;
     right: 80px;
 }
-.datos-importantes{
-    font-size: 10px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.imagen{
-    position: relative;
-    bottom: 50px;
-    
-}
+
+
 .imagen img{
-   width: 0px;
-   height: 0px;
+   width: 0;
+   height: 0;
 }
-.castrar{
-    width: 100%;
-    height: 150px;
-    position: relative;
-    bottom: 60px;
-    justify-content: center;
-    border: 2px dotted black;
-    background-color: #EBBED8;
-    right: -0px;
-}
-.adoptar{
-    position: relative;
-    bottom: 60px;
-    width: 100%;
-    height:150px;
-    border: 2px dotted black;
-    background-color: #EBBED8;
- 
-    
-}
-.castrar h2{
-    font-size: 15px;
-}
-.adoptar h2 {
-    font-size: 15px;
-}
+
 .grid-conteiner-fluid{
     width: 100%;
     height: 100%;
 }
 
 .mapa {
-    position: relative;
-    bottom: 50px;
+    width: 100%;
+
 }
-.caja3{
-    position: relative;
-    bottom: 50px;
+.adopcion{
+    width: 100%;
+    margin: 10px 10px;
 }
 .adopcion h2 {
-    font-size: 10px;
-    position: relative;
-    bottom: 40px;
+    font-size: 30px;
+  width: 80%;
     font-family: 'Times New Roman', Times, serif;
     color: pink;
     background-color: #a576ca;
     align-self: center;
+    position: relative;
+    right: -40px;
 }
 .adopta{
     
@@ -461,23 +481,29 @@ form:hover{
     object-fit:contain ;
     font-family: Arial, Helvetica, sans-serif;
     width: 70%;
-    position: relative;
-    bottom: 40px;
+    
     left: 15%;
     border: 2px solid black;
     height: 20%;
 }
-
+.adopta img {
+    object-fit: contain;
+}
+.adopta button {
+    background-color: #bc2fb9;
+    width: 100px;
+    height: 40px;
+    border: #000 2px dashed;
+}
+.adopta button p {
+    font-size: 10px;
+    text-align: center;
+}
 footer{
     width: 100%;
-    height: 30%;
+   
     font-size: 5px;
     background-color: #ca30df;
-    position: relative;
-     bottom: 30px;
-
-
- 
 }
 .pie3 img {
     width: 0px;
@@ -486,37 +512,25 @@ footer{
 }
 
 .pie1{
-    font-size: 5px;
-      font-family: 'Courier New', Courier, monospace;
-      font-weight: 30px;
-      display: flex;
-      margin: 0;
+   display: block;
 }
 .pie1 p{
     font-size: 10px;
 }
 .pie2{
-    font-size: 5px;
-    position: relative;
-   right: 6%;
-   font-weight: 100px;
+   display: block;
    
 }
 .pie2 p {
-    font-size: 5px;
+  
 }
 
 /*pagina adoptar*/
-.contenedorform{
-
-}
 form{
     height: 40%;
     font-size: 7px;
     box-shadow: 6px 20px 10px black;
     position: relative;
-   
-
 }
 h4,h5,p,label{
     font-size: 10px;
@@ -588,30 +602,102 @@ h4,h5,p,label{
 
 }
 
+/*aqui empieza emedia querie de 380px*/
+
+
+
 
 @media only screen and (max-width:380px)
 {
-    .adoptar{
-        font-size: 10px;
-        height: 200px;
+    .grid-conteiner-fluid{
+        width: 100%;
+        height: 100%;
     }
-    .castrar{
-        font-size: 10px;
-        height: 200px;
-    }
-    .pie1{
-        font-size: 7px;
-    }
-    .pie3{
-        display: none;
+    .adoptar {
+        width: 80%;
+        height: 30%;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
         position: relative;
-       right: 30px;
-    }
-    .pie2 {
-
+        right: -50px;
+        padding: 5px 5px;
+      }
+      .adoptar h2 {
+        text-align: center;
+      }
+      .adoptar p{
+      margin: 15px 15px;
+      font-size: 20px;
+      }
+      .castrar {
+        width: 80%;
+        height: 30%;
+        box-shadow: 2px 5px 30px black;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
         position: relative;
-        left: -5px;
+        right: -50px;
+        padding: 5px 5px;
+         
+      }
+      .castrar h2 {
+        text-align: center;
+      }
+      .castrar p{
+      margin: 15px 15px;
+      font-size: 20px;
+      }
+    .nav-item{
+        position: relative;
+        right: 80px;
     }
+    
+    
+    .imagen img{
+       width: 0;
+       height: 0;
+    }
+    
+    .grid-conteiner-fluid{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mapa {
+        width: 100%;
+    
+    }
+    .caja3{
+       
+    }
+    .adopcion h2 {
+        font-size: 10px;
+      
+        font-family: 'Times New Roman', Times, serif;
+        color: pink;
+        background-color: #a576ca;
+        align-self: center;
+    }
+    .adopta img {
+        object-fit: contain;
+    }
+    .adopta button {
+        background-color: #F6D4BB;
+        width: 100px;
+        height: 40px;
+    }
+    .adopta{
+        
+        background-color: #9D8BDB;
+        object-fit:contain ;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 70%;
+        
+        left: 15%;
+        border: 2px solid black;
+        height: 20%;
+    }
+    
 }
 
 /*aqui terminamos de editar el media querie*/
@@ -630,7 +716,7 @@ background-color:#7700D4  ;
  
  
 }
-.adopta{
+.adopta {
     
     background-color: rgb(242, 147, 255);
     object-fit:contain ;

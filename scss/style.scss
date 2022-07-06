@@ -58,14 +58,14 @@ h1{
 
 .verde {
 	@extend .button;
-	background-color: green;
+	background-color: rgb(128, 63, 181);
 }
 .violeta{
 	@extend .button ;
-	background-color: violet;
+	background-color: rgba(128, 63, 181);
 }
 .amarillo {
 	@extend .button;
-	background-color: yellow;
+	background-color: rgb(128, 63, 181);
 }
 
